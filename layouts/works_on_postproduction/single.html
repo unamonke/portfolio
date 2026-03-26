@@ -1,0 +1,30 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<div class="work-meta">
+  {{ with .Params.year }}<p><strong>Год:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.director }}<p><strong>Режиссёр:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.workshop }}<p><strong>Мастерская:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.genre }}<p><strong>Жанр:</strong> {{ . }}</p>{{ end }}
+  {{ with .Params.duration }}<p><strong>Хронометраж:</strong> {{ . }}</p>{{ end }}
+  <p><strong>Роль:</strong> {{ .Params.role }}</p>
+  {{ with .Params.postwork }}<p><strong>Работа:</strong> {{ . }}</p>{{ end }}
+  {{ if .Params.student }}<p><strong>Тип:</strong> студенческий</p>{{ end }}
+  {{ with .Params.awards }}
+  <p><strong>Награды и номинации:</strong></p>
+  <ul>
+    {{ range . }}<li>{{ . }}</li>{{ end }}
+  </ul>
+  {{ end }}
+  {{ with .Params.links }}
+  <p><strong>Ссылки:</strong></p>
+  <ul>
+    {{ range . }}
+    <li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a></li>
+    {{ end }}
+  </ul>
+  {{ end }}
+</div>
+
+{{ .Content }}
+{{ end }}
