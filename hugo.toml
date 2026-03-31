@@ -10,12 +10,12 @@ theme = 'hugo-theme-console'
 
 [[params.navlinks]]
   name = "Работа на площадке"
-  url = "/works_on_set/"
+  url = "works_on_set/"
 
 [[params.navlinks]]
   name = "Работа на постпродакшене"
-  url = "/works_on_post/"
+  url = "works_on_post/"
 
 [[params.navlinks]]
   name = "Контакты"
-  url = "/contacts/"
+  url = "contacts/"
