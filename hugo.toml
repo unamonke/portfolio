@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://unamonke.github.io/portfolio/'
 languageCode = 'ru-ru'
 title = 'Сергей Голованов'
 theme = 'hugo-theme-console'
